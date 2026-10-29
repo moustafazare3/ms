@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ردود الحضور</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fff1db;
+    --text: #2c2620;
+    --muted: #7b6f62;
+    --gold: #b58a4a;
+    --gold-dark: #8d6428;
+    --line: rgba(181, 138, 74, 0.4);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Cairo", sans-serif;
+  }
+  main {
+    width: min(920px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 48px 0 72px;
+  }
+  h1 {
+    margin: 0;
+    font-family: "Amiri", serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    color: #765a37;
+  }
+  .lead, .hello {
+    margin: 8px 0 0;
+    text-align: center;
+    color: var(--muted);
+  }
+  .panel, .card, table {
+    background: transparent;
+  }
+  form.gate {
+    width: min(380px, 100%);
+    margin: 36px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  label { text-align: center; color: #8a6840; }
+  input[type="tel"] {
+    width: 100%;
+    height: 52px;
+    padding: 0 16px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: transparent;
+    color: var(--text);
+    font: inherit;
+    text-align: center;
+    direction: ltr;
+  }
+  input:focus, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  button, .switch button {
+    border: 0;
+    border-radius: 999px;
+    min-height: 48px;
+    background: linear-gradient(135deg, #c9a363, #a97a3c);
+    color: #fffaf0;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .error {
+    min-height: 1.4em;
+    margin: 0;
+    text-align: center;
+    color: #b4413c;
+  }
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin: 28px 0 16px;
+    flex-wrap: wrap;
+  }
+  .stats { display: flex; gap: 8px; flex-wrap: wrap; }
+  .stats span, .switch {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 6px 12px;
+    color: #6d5338;
+    background: transparent;
+  }
+  .switch { display: flex; padding: 4px; gap: 4px; }
+  .switch button {
+    min-height: 36px;
+    padding: 0 14px;
+    background: transparent;
+    color: #6d5338;
+  }
+  .switch button[aria-pressed="true"] {
+    background: linear-gradient(135deg, #c9a363, #a97a3c);
+    color: #fffaf0;
+  }
+  .ghost {
+    background: transparent;
+    color: var(--gold-dark);
+    border: 1px solid var(--line);
+    min-height: 40px;
+    padding: 0 16px;
+  }
+  .cards { display: grid; gap: 12px; }
+  .card {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 16px 18px;
+  }
+  .card header, .person {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+  }
+  .card h2, .person strong { margin: 0; font-size: 20px; }
+  .badge {
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  .yes { background: rgba(181, 138, 74, 0.18); color: #6d4c1d; }
+  .no { background: rgba(180, 65, 60, 0.12); color: #8d3a36; }
+  .msg { margin: 10px 0 0; line-height: 1.7; }
+  time { display: block; margin-top: 8px; color: var(--muted); font-size: 13px; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td {
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--line);
+    text-align: right;
+    vertical-align: top;
+  }
+  th { color: #8a6840; font-weight: 600; }
+  .empty { text-align: center; color: var(--muted); margin-top: 40px; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <h1>ردود الحضور</h1>
+  <p class="lead" id="lead">أدخل رقم الموبايل للدخول</p>
+
+  <section id="gate">
+    <form class="gate" id="gate-form">
+      <label for="phone">رقم الموبايل</label>
+      <input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="01xxxxxxxxx" required>
+      <button type="submit">دخول</button>
+      <p class="error" id="gate-error" role="alert"></p>
+    </form>
+  </section>
+
+  <section id="list" hidden>
+    <p class="hello" id="hello"></p>
+    <div class="toolbar">
+      <div class="stats" id="stats"></div>
+      <div class="switch" role="group" aria-label="طريقة العرض">
+        <button type="button" id="view-cards" aria-pressed="true">بطاقات</button>
+        <button type="button" id="view-table" aria-pressed="false">جدول</button>
+      </div>
+      <button type="button" class="ghost" id="logout">خروج</button>
+    </div>
+    <div class="cards" id="cards"></div>
+    <div id="table-wrap" hidden>
+      <table>
+        <thead>
+          <tr><th>الاسم</th><th>الحضور</th><th>التهنئة</th><th>الوقت</th></tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+    <p class="empty" id="empty" hidden>لا توجد ردود بعد.</p>
+  </section>
+</main>
+<script>
+(function () {
+  var gate = document.getElementById("gate");
+  var list = document.getElementById("list");
+  var lead = document.getElementById("lead");
+  var error = document.getElementById("gate-error");
+  var cards = document.getElementById("cards");
+  var rows = document.getElementById("rows");
+  var tableWrap = document.getElementById("table-wrap");
+  var empty = document.getElementById("empty");
+  var view = "cards";
+
+  function statusText(value) {
+    return value === "attending" ? "سأحضر" : "أعتذر";
+  }
+
+  function when(value) {
+    var date = new Date(value);
+    if (Number.isNaN(date.getTime())) return "";
+    return new Intl.DateTimeFormat("ar-EG", {
+      dateStyle: "medium",
+      timeStyle: "short"
+    }).format(date);
+  }
+
+  function badge(value) {
+    var span = document.createElement("span");
+    span.className = "badge " + (value === "attending" ? "yes" : "no");
+    span.textContent = statusText(value);
+    return span;
+  }
+
+  function showGate() {
+    gate.hidden = false;
+    list.hidden = true;
+    lead.textContent = "أدخل رقم الموبايل للدخول";
+  }
+
+  function render(data) {
+    gate.hidden = true;
+    list.hidden = false;
+    lead.hidden = true;
+    document.getElementById("hello").textContent = "أهلاً " + data.name;
+    document.getElementById("stats").replaceChildren();
+    ["الكل " + data.total, "سأحضر " + data.attending, "أعتذر " + data.declined].forEach(function (text) {
+      var span = document.createElement("span");
+      span.textContent = text;
+      document.getElementById("stats").appendChild(span);
+    });
+
+    cards.replaceChildren();
+    rows.replaceChildren();
+    empty.hidden = data.replies.length > 0;
+    cards.hidden = view !== "cards" || data.replies.length === 0;
+    tableWrap.hidden = view !== "table" || data.replies.length === 0;
+
+    data.replies.forEach(function (reply) {
+      var card = document.createElement("article");
+      card.className = "card";
+      var header = document.createElement("header");
+      var title = document.createElement("h2");
+      title.textContent = reply.name || "";
+      header.appendChild(title);
+      header.appendChild(badge(reply.status));
+      card.appendChild(header);
+      if (reply.message) {
+        var msg = document.createElement("p");
+        msg.className = "msg";
+        msg.textContent = reply.message;
+        card.appendChild(msg);
+      }
+      var time = document.createElement("time");
+      time.dateTime = reply.at || "";
+      time.textContent = when(reply.at);
+      card.appendChild(time);
+      cards.appendChild(card);
+
+      var tr = document.createElement("tr");
+      [reply.name || "", statusText(reply.status), reply.message || "—", when(reply.at)].forEach(function (text) {
+        var td = document.createElement("td");
+        td.textContent = text;
+        tr.appendChild(td);
+      });
+      rows.appendChild(tr);
+    });
+  }
+
+  function setView(next) {
+    view = next;
+    document.getElementById("view-cards").setAttribute("aria-pressed", next === "cards");
+    document.getElementById("view-table").setAttribute("aria-pressed", next === "table");
+    var hasRows = rows.children.length > 0;
+    cards.hidden = next !== "cards" || !hasRows;
+    tableWrap.hidden = next !== "table" || !hasRows;
+  }
+
+  async function load() {
+    var response = await fetch("/api/rsvps", { credentials: "same-origin" });
+    if (response.status === 401) {
+      showGate();
+      return;
+    }
+    var data = await response.json();
+    if (!response.ok || !data.ok) {
+      showGate();
+      return;
+    }
+    render(data);
+  }
+
+  document.getElementById("gate-form").addEventListener("submit", async function (event) {
+    event.preventDefault();
+    error.textContent = "";
+    var response = await fetch("/api/session", {
+      method: "POST",
+      credentials: "same-origin",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ phone: document.getElementById("phone").value })
+    });
+    var data = await response.json().catch(function () { return {}; });
+    if (!response.ok || !data.ok) {
+      error.textContent = (data && data.error) || "هذا الرقم غير مصرّح له";
+      return;
+    }
+    load();
+  });
+
+  document.getElementById("logout").addEventListener("click", async function () {
+    await fetch("/api/logout", { method: "POST", credentials: "same-origin" });
+    cards.replaceChildren();
+    rows.replaceChildren();
+    showGate();
+  });
+  document.getElementById("view-cards").addEventListener("click", function () { setView("cards"); });
+  document.getElementById("view-table").addEventListener("click", function () { setView("table"); });
+
+  load();
+})();
+</script>
+</body>
+</html>
