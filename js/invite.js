@@ -1176,13 +1176,30 @@
       var body = new FormData(form);
       body.set("lang", isEn() ? "en" : "ar");
 
-      fetch(form.action, {
+      /* Relative action (api/rsvp.php) works in subfolders and without
+         rewrite. Fall back to clean URL only if action is missing. */
+      var endpoint = form.getAttribute("action") || "api/rsvp.php";
+      fetch(endpoint, {
         method: "POST",
         body: body,
-        headers: { "X-Requested-With": "XMLHttpRequest" },
+        headers: { "X-Requested-With": "XMLHttpRequest", "Accept": "application/json" },
         credentials: "same-origin"
       })
-        .then(function (r) { return r.json().catch(function () { return { ok: r.ok }; }); })
+        .then(function (r) {
+          return r.text().then(function (text) {
+            var data = null;
+            try { data = text ? JSON.parse(text) : null; } catch (e) { data = null; }
+            if (!data || typeof data !== "object") {
+              data = {
+                ok: false,
+                error: r.ok
+                  ? tr("تعذّر الإرسال، حاول مرة أخرى.", "Couldn't send, please try again.")
+                  : tr("تعذّر الوصول لخادم الردود (HTTP " + r.status + ").", "Couldn't reach the RSVP server (HTTP " + r.status + ").")
+              };
+            }
+            return data;
+          });
+        })
         .then(function (data) {
           if (data && data.ok) {
             /* رسالة السيرفر عربي والصفحة إنجليزي (ترجمة ناقصة)؟ نسيب

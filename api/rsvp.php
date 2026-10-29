@@ -14,7 +14,7 @@ $name = preg_replace('/\s+/u', ' ', trim((string) ($_POST['name'] ?? ''))) ?? ''
 $status = (string) ($_POST['status'] ?? '');
 $message = trim((string) ($_POST['message'] ?? ''));
 
-if ($name === '' || mb_strlen($name) > 120) {
+if ($name === '' || invite_strlen($name) > 120) {
     invite_send_json(400, ['ok' => false, 'error' => 'اكتب الاسم']);
     exit;
 }
@@ -22,8 +22,8 @@ if (!in_array($status, ['attending', 'declined'], true)) {
     invite_send_json(400, ['ok' => false, 'error' => 'اختر حالة الحضور']);
     exit;
 }
-if (mb_strlen($message) > 600) {
-    $message = mb_substr($message, 0, 600);
+if (invite_strlen($message) > 600) {
+    $message = invite_substr($message, 0, 600);
 }
 
 $row = [

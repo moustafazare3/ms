@@ -87,9 +87,30 @@ function invite_save_rsvps(array $rows): void
 function invite_ensure_data_file(): void
 {
     $file = invite_data_file();
-    if (!is_file($file)) {
-        invite_save_rsvps([]);
+    if (is_file($file)) {
+        return;
     }
+    try {
+        invite_save_rsvps([]);
+    } catch (Throwable $e) {
+        // Defer failure to the endpoint that writes; avoid fatal on include.
+    }
+}
+
+/** mbstring-safe length (shared hosts sometimes lack mbstring). */
+function invite_strlen(string $value): int
+{
+    return function_exists('mb_strlen') ? mb_strlen($value, 'UTF-8') : strlen($value);
+}
+
+function invite_substr(string $value, int $start, ?int $length = null): string
+{
+    if (function_exists('mb_substr')) {
+        return $length === null
+            ? mb_substr($value, $start, null, 'UTF-8')
+            : mb_substr($value, $start, $length, 'UTF-8');
+    }
+    return $length === null ? substr($value, $start) : substr($value, $start, $length);
 }
 
 function invite_send_json(int $status, array $payload, ?bool $clearSessionCookie = null): void

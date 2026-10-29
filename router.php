@@ -5,9 +5,13 @@ declare(strict_types=1);
 $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
 $routes = [
     '/api/rsvp' => __DIR__ . '/api/rsvp.php',
+    '/api/rsvp.php' => __DIR__ . '/api/rsvp.php',
     '/api/session' => __DIR__ . '/api/session.php',
+    '/api/session.php' => __DIR__ . '/api/session.php',
     '/api/rsvps' => __DIR__ . '/api/rsvps.php',
+    '/api/rsvps.php' => __DIR__ . '/api/rsvps.php',
     '/api/logout' => __DIR__ . '/api/logout.php',
+    '/api/logout.php' => __DIR__ . '/api/logout.php',
 ];
 if (isset($routes[$path])) {
     require $routes[$path];

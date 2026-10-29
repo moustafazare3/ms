@@ -4,11 +4,10 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 
-RewriteRule ^api/rsvp$ api/rsvp.php [L,QSA]
-RewriteRule ^api/session$ api/session.php [L,QSA]
-RewriteRule ^api/rsvps$ api/rsvps.php [L,QSA]
-RewriteRule ^api/logout$ api/logout.php [L,QSA]
+# Clean URLs and .php both map to the same scripts.
+RewriteRule ^api/(rsvp|session|rsvps|logout)(\.php)?$ api/$1.php [L,QSA]
 
+# Block anything else under /api/ (e.g. _common.php) and /data/
 RewriteRule ^api/ - [F,L]
 RewriteRule ^data/ - [F,L]
 </IfModule>

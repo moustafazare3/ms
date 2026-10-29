@@ -285,12 +285,12 @@
   }
 
   async function load() {
-    var response = await fetch("/api/rsvps", { credentials: "same-origin" });
+    var response = await fetch("api/rsvps.php", { credentials: "same-origin" });
     if (response.status === 401) {
       showGate();
       return;
     }
-    var data = await response.json();
+    var data = await response.json().catch(function () { return {}; });
     if (!response.ok || !data.ok) {
       showGate();
       return;
@@ -301,10 +301,10 @@
   document.getElementById("gate-form").addEventListener("submit", async function (event) {
     event.preventDefault();
     error.textContent = "";
-    var response = await fetch("/api/session", {
+    var response = await fetch("api/session.php", {
       method: "POST",
       credentials: "same-origin",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
       body: JSON.stringify({ phone: document.getElementById("phone").value })
     });
     var data = await response.json().catch(function () { return {}; });
@@ -316,7 +316,7 @@
   });
 
   document.getElementById("logout").addEventListener("click", async function () {
-    await fetch("/api/logout", { method: "POST", credentials: "same-origin" });
+    await fetch("api/logout.php", { method: "POST", credentials: "same-origin" });
     cards.replaceChildren();
     rows.replaceChildren();
     showGate();
