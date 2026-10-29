@@ -21,7 +21,15 @@ function invite_data_file(): string
 
 function invite_normalize_phone(?string $value): string
 {
-    $digits = preg_replace('/\D/', '', $value ?? '') ?? '';
+    $raw = (string) ($value ?? '');
+    // Arabic-Indic / Persian digits → ASCII (common on Arabic keyboards).
+    $raw = strtr($raw, [
+        '٠' => '0', '١' => '1', '٢' => '2', '٣' => '3', '٤' => '4',
+        '٥' => '5', '٦' => '6', '٧' => '7', '٨' => '8', '٩' => '9',
+        '۰' => '0', '۱' => '1', '۲' => '2', '۳' => '3', '۴' => '4',
+        '۵' => '5', '۶' => '6', '۷' => '7', '۸' => '8', '۹' => '9',
+    ]);
+    $digits = preg_replace('/\D/', '', $raw) ?? '';
     if (substr($digits, 0, 4) === '0020') {
         $digits = substr($digits, 4);
     } elseif (substr($digits, 0, 2) === '20' && strlen($digits) >= 12) {

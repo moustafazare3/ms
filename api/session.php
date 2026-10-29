@@ -6,7 +6,14 @@ require __DIR__ . '/_common.php';
 invite_require_method('POST');
 
 $payload = invite_read_json_body();
-$phone = invite_normalize_phone(isset($payload['phone']) ? (string) $payload['phone'] : '');
+// Prefer JSON body; fall back to form fields if a proxy stripped JSON.
+$rawPhone = '';
+if (isset($payload['phone'])) {
+    $rawPhone = (string) $payload['phone'];
+} elseif (isset($_POST['phone'])) {
+    $rawPhone = (string) $_POST['phone'];
+}
+$phone = invite_normalize_phone($rawPhone);
 $name = INVITE_ADMINS[$phone] ?? null;
 
 if ($name === null) {
