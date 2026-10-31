@@ -156,24 +156,29 @@
   width: 100%;
   align-items: flex-start;
   justify-content: center;
-  gap: 9px;
+  gap: 12px;
   direction: rtl;
   overflow: visible;
 }
 #custom_html-tu9oor #farhaArabicDate .fad-card-wrap {
   position: relative;
   display: block;
-  width: 31.5%;
-  max-width: 112px;
+  flex: 1 1 0;
+  width: auto;
+  min-width: 0;
+  max-width: 128px;
   overflow: visible;
 }
 #custom_html-tu9oor #farhaArabicDate .fad-card {
   position: relative;
   display: flex;
   width: 100%;
+  min-height: 126px;
   height: 126px;
   align-items: center;
   justify-content: center;
+  padding: 18px 26px;
+  box-sizing: border-box;
   border-radius: 16px;
   overflow: hidden;
   background: linear-gradient(
@@ -194,18 +199,21 @@
 #custom_html-tu9oor #farhaArabicDate .fad-value {
   position: relative;
   z-index: 1;
-  width: 100%;
-  padding: 0 4px;
+  width: auto;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
   font-family: "Aref Ruqaa", "Geeza Pro", "Traditional Arabic", serif;
-  font-size: 29px;
-  line-height: 1.3;
+  font-size: clamp(18px, 5.2cqw, 26px);
+  line-height: 1.2;
   font-weight: 700;
   color: #7b5427;
   text-align: center;
   direction: rtl;
+  white-space: nowrap;
 }
 #custom_html-tu9oor #farhaArabicDate .fad-month {
-  font-size: 22px;
+  font-size: clamp(14px, 4.2cqw, 18px);
 }
 #custom_html-tu9oor #farhaArabicDate .fad-scratch {
   display: none;
