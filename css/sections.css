@@ -1,0 +1,1713 @@
+/* --- custom_html-na2isl --- */
+#custom_html-na2isl .farha-arabic-divider {
+  position: relative;
+  width: 100%;
+  height: 72px;
+  min-height: 72px;
+  box-sizing: border-box;
+  overflow: visible;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#custom_html-na2isl .farha-arabic-divider *,
+#custom_html-na2isl .farha-arabic-divider *::before,
+#custom_html-na2isl .farha-arabic-divider *::after {
+  box-sizing: border-box;
+}
+#custom_html-na2isl .farha-arabic-divider .fadiv-move {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  overflow: visible;
+}
+#custom_html-na2isl .farha-arabic-divider .fadiv-design {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+#custom_html-na2isl .farha-arabic-divider .fadiv-line {
+  position: relative;
+  display: block;
+  width: 82px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(181, 138, 74, 0.45),
+    #b58a4a
+  );
+}
+#custom_html-na2isl .farha-arabic-divider .fadiv-line.right {
+  background: linear-gradient(
+    90deg,
+    #b58a4a,
+    rgba(181, 138, 74, 0.45),
+    transparent
+  );
+}
+#custom_html-na2isl .farha-arabic-divider .fadiv-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #b58a4a;
+  opacity: 0.75;
+}
+#custom_html-na2isl .farha-arabic-divider .fadiv-center {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#custom_html-na2isl .farha-arabic-divider .fadiv-diamond {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  border: 1px solid rgba(181, 138, 74, 0.8);
+  transform: rotate(45deg);
+}
+#custom_html-na2isl .farha-arabic-divider .fadiv-diamond-small {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: #b58a4a;
+  transform: rotate(45deg);
+  box-shadow: 0 0 10px rgba(181, 138, 74, 0.25);
+}
+#custom_html-na2isl .farha-arabic-divider .fadiv-center::before,
+#custom_html-na2isl .farha-arabic-divider .fadiv-center::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #b58a4a;
+}
+#custom_html-na2isl .farha-arabic-divider .fadiv-center::before {
+  left: -3px;
+}
+#custom_html-na2isl .farha-arabic-divider .fadiv-center::after {
+  right: -3px;
+}
+
+/* --- custom_html-tu9oor --- */
+#custom_html-tu9oor #farhaArabicDate {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  background: transparent;
+  direction: rtl;
+  overflow: visible;
+  padding: 18px 10px 8px;
+}
+#custom_html-tu9oor #farhaArabicDate,
+#custom_html-tu9oor #farhaArabicDate * {
+  box-sizing: border-box;
+}
+#custom_html-tu9oor #farhaArabicDate .fad-content {
+  position: relative;
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: visible;
+}
+#custom_html-tu9oor #farhaArabicDate .fad-move {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: visible;
+}
+#custom_html-tu9oor #farhaArabicDate .fad-title {
+  display: block;
+  margin: 0;
+  font-family: "Aref Ruqaa", "Geeza Pro", "Traditional Arabic", serif;
+  font-size: 36px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #80663f;
+  text-align: center;
+  direction: rtl;
+}
+#custom_html-tu9oor #farhaArabicDate .fad-subtitle {
+  display: block;
+  margin: 5px auto 14px;
+  font-family: "Noto Naskh Arabic", "Geeza Pro", Tahoma, Arial, serif;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 600;
+  color: #9a7a45;
+  text-align: center;
+  direction: rtl;
+}
+#custom_html-tu9oor #farhaArabicDate .fad-star {
+  color: #aa8849;
+  margin: 0 5px;
+}
+#custom_html-tu9oor #farhaArabicDate .fad-cards {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 9px;
+  direction: rtl;
+  overflow: visible;
+}
+#custom_html-tu9oor #farhaArabicDate .fad-card-wrap {
+  position: relative;
+  display: block;
+  width: 31.5%;
+  max-width: 112px;
+  overflow: visible;
+}
+#custom_html-tu9oor #farhaArabicDate .fad-card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 126px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(
+    145deg,
+    #fffdf7 0%,
+    #fbf1db 35%,
+    #f2d8a7 70%,
+    #d8ad6d 100%
+  );
+  border: 1px solid rgba(188, 145, 78, 0.75);
+  box-shadow:
+    inset 0 0 0 3px rgba(255, 250, 238, 0.72),
+    0 7px 20px rgba(132, 92, 36, 0.1);
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+#custom_html-tu9oor #farhaArabicDate .fad-value {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 0 4px;
+  font-family: "Aref Ruqaa", "Geeza Pro", "Traditional Arabic", serif;
+  font-size: 29px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #7b5427;
+  text-align: center;
+  direction: rtl;
+}
+#custom_html-tu9oor #farhaArabicDate .fad-month {
+  font-size: 22px;
+}
+#custom_html-tu9oor #farhaArabicDate .fad-scratch {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  border-radius: 15px;
+  touch-action: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#custom_html-tu9oor #farhaArabicDate .fad-label {
+  display: block;
+  margin: 6px 0 0;
+  font-family: "Noto Naskh Arabic", "Geeza Pro", Tahoma, Arial, serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 600;
+  color: #9a6d32;
+  text-align: center;
+  direction: rtl;
+}
+#custom_html-tu9oor #farhaArabicDate .fad-card.fad-revealed {
+  animation: fadReveal 0.7s ease;
+  box-shadow:
+    inset 0 0 0 3px rgba(255, 250, 238, 0.8),
+    0 8px 24px rgba(178, 133, 67, 0.22),
+    0 0 20px rgba(215, 177, 112, 0.24);
+}
+@keyframes fadReveal {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+#custom_html-tu9oor #farhaArabicDate .fad-card.fad-revealed::after {
+  content: "";
+  position: absolute;
+  z-index: 7;
+  top: -20%;
+  left: -50%;
+  width: 34px;
+  height: 140%;
+  transform: rotate(18deg);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.9),
+    transparent
+  );
+  animation: fadShine 0.8s ease forwards;
+  pointer-events: none;
+}
+@keyframes fadShine {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 130%;
+  }
+}
+@media (max-width: 600px) {
+  #custom_html-tu9oor #farhaArabicDate {
+    padding: 16px 10px 6px;
+  }
+}
+
+/* --- custom_html-8g02pu --- */
+#custom_html-8g02pu .farha-arabic-divider {
+  position: relative;
+  width: 100%;
+  height: 72px;
+  min-height: 72px;
+  box-sizing: border-box;
+  overflow: visible;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#custom_html-8g02pu .farha-arabic-divider *,
+#custom_html-8g02pu .farha-arabic-divider *::before,
+#custom_html-8g02pu .farha-arabic-divider *::after {
+  box-sizing: border-box;
+}
+#custom_html-8g02pu .farha-arabic-divider .fadiv-move {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  overflow: visible;
+}
+#custom_html-8g02pu .farha-arabic-divider .fadiv-design {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+#custom_html-8g02pu .farha-arabic-divider .fadiv-line {
+  position: relative;
+  display: block;
+  width: 82px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(181, 138, 74, 0.45),
+    #b58a4a
+  );
+}
+#custom_html-8g02pu .farha-arabic-divider .fadiv-line.right {
+  background: linear-gradient(
+    90deg,
+    #b58a4a,
+    rgba(181, 138, 74, 0.45),
+    transparent
+  );
+}
+#custom_html-8g02pu .farha-arabic-divider .fadiv-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #b58a4a;
+  opacity: 0.75;
+}
+#custom_html-8g02pu .farha-arabic-divider .fadiv-center {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#custom_html-8g02pu .farha-arabic-divider .fadiv-diamond {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  border: 1px solid rgba(181, 138, 74, 0.8);
+  transform: rotate(45deg);
+}
+#custom_html-8g02pu .farha-arabic-divider .fadiv-diamond-small {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: #b58a4a;
+  transform: rotate(45deg);
+  box-shadow: 0 0 10px rgba(181, 138, 74, 0.25);
+}
+#custom_html-8g02pu .farha-arabic-divider .fadiv-center::before,
+#custom_html-8g02pu .farha-arabic-divider .fadiv-center::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #b58a4a;
+}
+#custom_html-8g02pu .farha-arabic-divider .fadiv-center::before {
+  left: -3px;
+}
+#custom_html-8g02pu .farha-arabic-divider .fadiv-center::after {
+  right: -3px;
+}
+
+/* --- custom_html-o9tdya --- */
+#custom_html-o9tdya .farha-ar-timeline {
+  --gold: #b58a4a;
+  --gold-dark: #87602d;
+  --brown: #76532e;
+  --cream: #f7ecd7;
+  position: relative;
+  width: 100%;
+  min-height: 1000px;
+  box-sizing: border-box;
+  overflow: visible;
+  background: transparent;
+  font-family: "Noto Naskh Arabic", "Geeza Pro", Tahoma, serif;
+  direction: rtl;
+}
+#custom_html-o9tdya .farha-ar-timeline *,
+#custom_html-o9tdya .farha-ar-timeline *::before,
+#custom_html-o9tdya .farha-ar-timeline *::after {
+  box-sizing: border-box;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-stage {
+  position: relative;
+  width: 100%;
+  max-width: 430px;
+  min-height: 1000px;
+  margin: 0 auto;
+  padding: 35px 10px 45px;
+  overflow: visible;
+  direction: rtl;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-header {
+  position: relative;
+  width: 100%;
+  margin-bottom: 60px;
+  text-align: center;
+  overflow: visible;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-header-anim {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s ease;
+}
+#custom_html-o9tdya .farha-ar-timeline.fat-show .fat-header-anim {
+  opacity: 1;
+  transform: translateY(0);
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-title {
+  display: block;
+  margin: 0;
+  font-family: "Aref Ruqaa", "Geeza Pro", "Traditional Arabic", serif;
+  font-size: 29px;
+  line-height: 1.35;
+  font-weight: 700;
+  color: #765a37;
+  text-align: center;
+  direction: rtl;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-ornament {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 235px;
+  max-width: 80%;
+  margin: 13px auto 0;
+  pointer-events: none;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-ornament-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-ornament-center {
+  position: relative;
+  width: 26px;
+  height: 19px;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-ornament-center::before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 1px;
+  width: 8px;
+  height: 14px;
+  border: 1px solid var(--gold);
+  border-radius: 50% 50% 45% 45%;
+  transform: rotate(45deg);
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-ornament-center::after {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 1px;
+  width: 8px;
+  height: 14px;
+  border: 1px solid var(--gold);
+  border-radius: 50% 50% 45% 45%;
+  transform: rotate(-45deg);
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-timeline {
+  position: relative;
+  width: calc(100% - 8px);
+  max-width: 390px;
+  height: 760px;
+  margin: 0 auto;
+  overflow: visible;
+  direction: ltr;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-center-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  margin-left: -0.5px;
+  background: linear-gradient(
+    to bottom,
+    rgba(181, 138, 74, 0.45),
+    rgba(181, 138, 74, 0.95) 5%,
+    rgba(181, 138, 74, 0.95) 95%,
+    rgba(181, 138, 74, 0.45)
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-start-diamond,
+#custom_html-o9tdya .farha-ar-timeline .fat-end-diamond {
+  position: absolute;
+  left: 50%;
+  width: 11px;
+  height: 11px;
+  margin-left: -5.5px;
+  background: #f7ecd7;
+  border: 1.2px solid var(--gold);
+  transform: rotate(45deg);
+  z-index: 3;
+  pointer-events: none;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-start-diamond {
+  top: -5px;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-end-diamond {
+  bottom: -5px;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-stop {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 112px;
+  margin-top: -56px;
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    46px
+    minmax(0, 1fr);
+  align-items: center;
+  overflow: visible;
+  direction: ltr;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-stop-1 {
+  top: 8%;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-stop-2 {
+  top: 36%;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-stop-3 {
+  top: 64%;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-stop-4 {
+  top: 92%;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-stop-5 {
+  top: 92%;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-middle {
+  grid-column: 2;
+  width: 46px;
+  height: 100%;
+  pointer-events: none;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-text-side {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-side-left {
+  grid-column: 1;
+  justify-content: flex-end;
+  padding-right: 20px;
+  text-align: right;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-side-right {
+  grid-column: 3;
+  justify-content: flex-start;
+  padding-left: 20px;
+  text-align: right;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-text-anim {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  overflow: visible;
+  opacity: 0;
+  transform: translateY(7px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+#custom_html-o9tdya .farha-ar-timeline.fat-show .fat-text-anim {
+  opacity: 1;
+  transform: translateY(0);
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-stop-2 .fat-text-anim {
+  transition-delay: 0.05s;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-stop-3 .fat-text-anim {
+  transition-delay: 0.1s;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-stop-4 .fat-text-anim {
+  transition-delay: 0.15s;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-stop-5 .fat-text-anim {
+  transition-delay: 0.2s;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-event {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  overflow: visible;
+  direction: rtl;
+  text-align: center;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-time {
+  display: block;
+  width: 100%;
+  margin: 0 0 7px;
+  font-family: "Aref Ruqaa", "Geeza Pro", "Traditional Arabic", serif;
+  font-size: 23px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #7b5d39;
+  white-space: nowrap;
+  text-align: center;
+  direction: rtl;
+  unicode-bidi: isolate;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-label {
+  display: block;
+  width: 100%;
+  margin: 0;
+  font-family: "Noto Naskh Arabic", "Geeza Pro", Tahoma, serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #725234;
+  text-align: center;
+  direction: rtl;
+  white-space: pre-wrap;
+  overflow: visible;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-label div,
+#custom_html-o9tdya .farha-ar-timeline .fat-label p,
+#custom_html-o9tdya .farha-ar-timeline .fat-label span {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-image-space {
+  position: relative;
+  width: 100%;
+  height: 125px;
+  min-width: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-stop-1 .fat-image-space {
+  grid-column: 1;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-stop-1 .fat-text-side {
+  grid-column: 3;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-stop-2 .fat-text-side {
+  grid-column: 1;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-stop-2 .fat-image-space {
+  grid-column: 3;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-stop-3 .fat-image-space {
+  grid-column: 1;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-stop-3 .fat-text-side {
+  grid-column: 3;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-stop-4 .fat-text-side {
+  grid-column: 1;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-stop-4 .fat-image-space {
+  grid-column: 3;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-stop-5 .fat-image-space {
+  grid-column: 1;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-stop-5 .fat-text-side {
+  grid-column: 3;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-stop-1 .fat-text-side,
+#custom_html-o9tdya .farha-ar-timeline .fat-stop-3 .fat-text-side,
+#custom_html-o9tdya .farha-ar-timeline .fat-stop-5 .fat-text-side {
+  padding-left: 20px;
+  padding-right: 0;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-stop-2 .fat-text-side,
+#custom_html-o9tdya .farha-ar-timeline .fat-stop-4 .fat-text-side {
+  padding-right: 20px;
+  padding-left: 0;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-runner {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: 20;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  margin-top: -23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  pointer-events: none;
+  will-change: transform;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-flower {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  overflow: visible;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-petal {
+  position: absolute;
+  left: 16px;
+  top: 1px;
+  width: 10px;
+  height: 21px;
+  border-radius: 55% 55% 48% 48%;
+  border: 1px solid #b98b4c;
+  background: linear-gradient(180deg, #fffaf0 0%, #f3dfba 68%, #d2aa6c 100%);
+  transform-origin: 5px 20px;
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-petal:nth-child(1) {
+  transform: rotate(0deg);
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-petal:nth-child(2) {
+  transform: rotate(45deg);
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-petal:nth-child(3) {
+  transform: rotate(90deg);
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-petal:nth-child(4) {
+  transform: rotate(135deg);
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-petal:nth-child(5) {
+  transform: rotate(180deg);
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-petal:nth-child(6) {
+  transform: rotate(225deg);
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-petal:nth-child(7) {
+  transform: rotate(270deg);
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-petal:nth-child(8) {
+  transform: rotate(315deg);
+}
+#custom_html-o9tdya .farha-ar-timeline .fat-flower-center {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #a97939;
+  background: #d7b273;
+  box-shadow: inset 0 0 0 3px #fff4dc;
+  z-index: 3;
+}
+@media (max-width: 600px) {
+  #custom_html-o9tdya .farha-ar-timeline,
+  #custom_html-o9tdya .farha-ar-timeline .fat-stage {
+    min-height: 1000px;
+  }
+  #custom_html-o9tdya .farha-ar-timeline .fat-stage {
+    padding: 32px 7px 40px;
+  }
+  #custom_html-o9tdya .farha-ar-timeline .fat-title {
+    font-size: 26px;
+  }
+  #custom_html-o9tdya .farha-ar-timeline .fat-header {
+    margin-bottom: 55px;
+  }
+  #custom_html-o9tdya .farha-ar-timeline .fat-timeline {
+    width: calc(100% - 2px);
+    height: 760px;
+  }
+  #custom_html-o9tdya .farha-ar-timeline .fat-stop {
+    grid-template-columns:
+      minmax(0, 1fr)
+      42px
+      minmax(0, 1fr);
+  }
+  #custom_html-o9tdya .farha-ar-timeline .fat-middle {
+    width: 42px;
+  }
+  #custom_html-o9tdya .farha-ar-timeline .fat-stop-1 .fat-text-side,
+  #custom_html-o9tdya .farha-ar-timeline .fat-stop-3 .fat-text-side,
+  #custom_html-o9tdya .farha-ar-timeline .fat-stop-5 .fat-text-side {
+    padding-left: 17px;
+  }
+  #custom_html-o9tdya .farha-ar-timeline .fat-stop-2 .fat-text-side,
+  #custom_html-o9tdya .farha-ar-timeline .fat-stop-4 .fat-text-side {
+    padding-right: 17px;
+  }
+  #custom_html-o9tdya .farha-ar-timeline .fat-time {
+    font-size: 21px;
+  }
+  #custom_html-o9tdya .farha-ar-timeline .fat-label {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+  #custom_html-o9tdya .farha-ar-timeline .fat-runner {
+    width: 42px;
+    height: 42px;
+    margin-left: -21px;
+    margin-top: -21px;
+  }
+  #custom_html-o9tdya .farha-ar-timeline .fat-flower {
+    transform: scale(0.9);
+  }
+}
+@media (max-width: 370px) {
+  #custom_html-o9tdya .farha-ar-timeline .fat-stop-1 .fat-text-side,
+  #custom_html-o9tdya .farha-ar-timeline .fat-stop-3 .fat-text-side,
+  #custom_html-o9tdya .farha-ar-timeline .fat-stop-5 .fat-text-side {
+    padding-left: 13px;
+  }
+  #custom_html-o9tdya .farha-ar-timeline .fat-stop-2 .fat-text-side,
+  #custom_html-o9tdya .farha-ar-timeline .fat-stop-4 .fat-text-side {
+    padding-right: 13px;
+  }
+  #custom_html-o9tdya .farha-ar-timeline .fat-time {
+    font-size: 20px;
+  }
+  #custom_html-o9tdya .farha-ar-timeline .fat-label {
+    font-size: 14.5px;
+  }
+}
+
+/* --- custom_html-syaddu --- */
+#custom_html-syaddu .farha-arabic-divider {
+  position: relative;
+  width: 100%;
+  height: 72px;
+  min-height: 72px;
+  box-sizing: border-box;
+  overflow: visible;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#custom_html-syaddu .farha-arabic-divider *,
+#custom_html-syaddu .farha-arabic-divider *::before,
+#custom_html-syaddu .farha-arabic-divider *::after {
+  box-sizing: border-box;
+}
+#custom_html-syaddu .farha-arabic-divider .fadiv-move {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  overflow: visible;
+}
+#custom_html-syaddu .farha-arabic-divider .fadiv-design {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+#custom_html-syaddu .farha-arabic-divider .fadiv-line {
+  position: relative;
+  display: block;
+  width: 82px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(181, 138, 74, 0.45),
+    #b58a4a
+  );
+}
+#custom_html-syaddu .farha-arabic-divider .fadiv-line.right {
+  background: linear-gradient(
+    90deg,
+    #b58a4a,
+    rgba(181, 138, 74, 0.45),
+    transparent
+  );
+}
+#custom_html-syaddu .farha-arabic-divider .fadiv-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #b58a4a;
+  opacity: 0.75;
+}
+#custom_html-syaddu .farha-arabic-divider .fadiv-center {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#custom_html-syaddu .farha-arabic-divider .fadiv-diamond {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  border: 1px solid rgba(181, 138, 74, 0.8);
+  transform: rotate(45deg);
+}
+#custom_html-syaddu .farha-arabic-divider .fadiv-diamond-small {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: #b58a4a;
+  transform: rotate(45deg);
+  box-shadow: 0 0 10px rgba(181, 138, 74, 0.25);
+}
+#custom_html-syaddu .farha-arabic-divider .fadiv-center::before,
+#custom_html-syaddu .farha-arabic-divider .fadiv-center::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #b58a4a;
+}
+#custom_html-syaddu .farha-arabic-divider .fadiv-center::before {
+  left: -3px;
+}
+#custom_html-syaddu .farha-arabic-divider .fadiv-center::after {
+  right: -3px;
+}
+
+/* --- custom_html-l3u46d --- */
+#custom_html-l3u46d .farha-ar-countdown {
+  --gold: #b58a4a;
+  --gold-dark: #87602d;
+  --brown: #76532e;
+  position: relative;
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 24px 4px 22px;
+  box-sizing: border-box;
+  overflow: visible;
+  background: transparent;
+  direction: rtl;
+  font-family: "Noto Naskh Arabic", "Geeza Pro", Tahoma, serif;
+}
+#custom_html-l3u46d .farha-ar-countdown *,
+#custom_html-l3u46d .farha-ar-countdown *::before,
+#custom_html-l3u46d .farha-ar-countdown *::after {
+  box-sizing: border-box;
+}
+#custom_html-l3u46d .farha-ar-countdown .facd-header {
+  position: relative;
+  width: 100%;
+  margin: 0 0 20px;
+  text-align: center;
+  overflow: visible;
+}
+#custom_html-l3u46d .farha-ar-countdown .facd-header-anim {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+#custom_html-l3u46d .farha-ar-countdown.facd-show .facd-header-anim {
+  opacity: 1;
+  transform: translateY(0);
+}
+#custom_html-l3u46d .farha-ar-countdown .facd-title {
+  display: block;
+  width: 100%;
+  margin: 0;
+  font-family: "Aref Ruqaa", "Geeza Pro", "Traditional Arabic", serif;
+  font-size: 27px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #765a37;
+  text-align: center;
+}
+#custom_html-l3u46d .farha-ar-countdown .facd-subtitle {
+  display: block;
+  width: 100%;
+  margin: 5px 0 0;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #9a7848;
+  text-align: center;
+}
+#custom_html-l3u46d .farha-ar-countdown .facd-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 190px;
+  max-width: 70%;
+  margin: 10px auto 0;
+  pointer-events: none;
+}
+#custom_html-l3u46d .farha-ar-countdown .facd-ornament::before,
+#custom_html-l3u46d .farha-ar-countdown .facd-ornament::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+#custom_html-l3u46d .farha-ar-countdown .facd-diamond {
+  width: 7px;
+  height: 7px;
+  border: 1px solid var(--gold);
+  transform: rotate(45deg);
+}
+#custom_html-l3u46d .farha-ar-countdown .facd-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  width: 100%;
+  max-width: 422px;
+  gap: 5px;
+  margin: 0 auto;
+  direction: rtl;
+}
+#custom_html-l3u46d .farha-ar-countdown .facd-card {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  height: 96px;
+  border: 1px solid rgba(181, 138, 74, 0.58);
+  border-radius: 17px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 252, 246, 0.97),
+    rgba(245, 230, 202, 0.86)
+  );
+  box-shadow:
+    0 7px 18px rgba(112, 78, 38, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92);
+  overflow: hidden;
+}
+#custom_html-l3u46d .farha-ar-countdown .facd-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -70%;
+  width: 42%;
+  height: 200%;
+  transform: rotate(22deg);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.7),
+    transparent
+  );
+  animation: facdShine 4.8s ease-in-out infinite;
+  pointer-events: none;
+}
+#custom_html-l3u46d .farha-ar-countdown .facd-card:nth-child(2)::before {
+  animation-delay: 0.35s;
+}
+#custom_html-l3u46d .farha-ar-countdown .facd-card:nth-child(3)::before {
+  animation-delay: 0.7s;
+}
+#custom_html-l3u46d .farha-ar-countdown .facd-card:nth-child(4)::before {
+  animation-delay: 1.05s;
+}
+@keyframes facdShine {
+  0%,
+  68% {
+    left: -70%;
+  }
+  100% {
+    left: 135%;
+  }
+}
+#custom_html-l3u46d .farha-ar-countdown .facd-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 2px;
+  z-index: 2;
+}
+#custom_html-l3u46d .farha-ar-countdown .facd-number {
+  display: block;
+  width: 100%;
+  margin: 0;
+  font-family: "Aref Ruqaa", "Geeza Pro", "Traditional Arabic", serif;
+  font-size: 28px;
+  line-height: 1;
+  font-weight: 700;
+  color: #75552f;
+  text-align: center;
+  white-space: nowrap;
+}
+#custom_html-l3u46d .farha-ar-countdown .facd-label {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  font-family: "Noto Naskh Arabic", "Geeza Pro", Tahoma, serif;
+  font-size: 13.5px;
+  line-height: 1;
+  font-weight: 600;
+  color: #9b7543;
+  text-align: center;
+  white-space: nowrap;
+}
+@media (max-width: 370px) {
+  #custom_html-l3u46d .farha-ar-countdown {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  #custom_html-l3u46d .farha-ar-countdown .facd-grid {
+    gap: 3px;
+  }
+  #custom_html-l3u46d .farha-ar-countdown .facd-card {
+    height: 92px;
+    border-radius: 15px;
+  }
+  #custom_html-l3u46d .farha-ar-countdown .facd-number {
+    font-size: 24px;
+  }
+  #custom_html-l3u46d .farha-ar-countdown .facd-label {
+    font-size: 12.5px;
+  }
+}
+
+/* --- custom_html-tt54dz --- */
+#custom_html-tt54dz .farha-arabic-divider {
+  position: relative;
+  width: 100%;
+  height: 72px;
+  min-height: 72px;
+  box-sizing: border-box;
+  overflow: visible;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#custom_html-tt54dz .farha-arabic-divider *,
+#custom_html-tt54dz .farha-arabic-divider *::before,
+#custom_html-tt54dz .farha-arabic-divider *::after {
+  box-sizing: border-box;
+}
+#custom_html-tt54dz .farha-arabic-divider .fadiv-move {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  overflow: visible;
+}
+#custom_html-tt54dz .farha-arabic-divider .fadiv-design {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+#custom_html-tt54dz .farha-arabic-divider .fadiv-line {
+  position: relative;
+  display: block;
+  width: 82px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(181, 138, 74, 0.45),
+    #b58a4a
+  );
+}
+#custom_html-tt54dz .farha-arabic-divider .fadiv-line.right {
+  background: linear-gradient(
+    90deg,
+    #b58a4a,
+    rgba(181, 138, 74, 0.45),
+    transparent
+  );
+}
+#custom_html-tt54dz .farha-arabic-divider .fadiv-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #b58a4a;
+  opacity: 0.75;
+}
+#custom_html-tt54dz .farha-arabic-divider .fadiv-center {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#custom_html-tt54dz .farha-arabic-divider .fadiv-diamond {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  border: 1px solid rgba(181, 138, 74, 0.8);
+  transform: rotate(45deg);
+}
+#custom_html-tt54dz .farha-arabic-divider .fadiv-diamond-small {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: #b58a4a;
+  transform: rotate(45deg);
+  box-shadow: 0 0 10px rgba(181, 138, 74, 0.25);
+}
+#custom_html-tt54dz .farha-arabic-divider .fadiv-center::before,
+#custom_html-tt54dz .farha-arabic-divider .fadiv-center::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #b58a4a;
+}
+#custom_html-tt54dz .farha-arabic-divider .fadiv-center::before {
+  left: -3px;
+}
+#custom_html-tt54dz .farha-arabic-divider .fadiv-center::after {
+  right: -3px;
+}
+
+/* --- custom_html-s6afff --- */
+#custom_html-s6afff #farhaVenueSection,
+#custom_html-s6afff #farhaVenueSection * {
+  box-sizing: border-box;
+}
+#custom_html-s6afff #farhaVenueSection {
+  --gold: #94712f;
+  --cream: #fff1db;
+  --button: #b99450;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 48px 12px 60px;
+  background: var(--cream);
+  direction: rtl;
+  text-align: center;
+  overflow: hidden;
+}
+#custom_html-s6afff #farhaVenueSection .fvs-title {
+  margin: 0;
+  color: var(--gold);
+  font:
+    400 42px/1.5 "Amiri",
+    serif;
+}
+#custom_html-s6afff #farhaVenueSection .fvs-hall {
+  margin: 10px 0 0;
+  color: var(--gold);
+  font:
+    400 33px/1.5 "Amiri",
+    serif;
+}
+#custom_html-s6afff #farhaVenueSection .fvs-address {
+  max-width: 540px;
+  margin: 22px auto 38px;
+  color: #817b73;
+  font:
+    400 17px/2 "Cairo",
+    sans-serif;
+}
+#custom_html-s6afff #farhaVenueSection .fvs-photo {
+  width: min(420px, 92%);
+  max-width: 420px;
+  height: auto;
+  margin: 0 auto 30px;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #111;
+}
+#custom_html-s6afff #farhaVenueSection .fvs-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+#custom_html-s6afff #farhaVenueSection .fvs-map {
+  width: 100%;
+  max-width: 550px;
+  height: 315px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #e5e0d6;
+}
+#custom_html-s6afff #farhaVenueSection .fvs-map iframe {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+}
+#custom_html-s6afff #farhaVenueSection .fvs-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: 0;
+  min-height: 46px;
+  margin: 32px auto 0;
+  padding: 9px 27px;
+  border: 0;
+  border-radius: 100px;
+  background: var(--button);
+  color: #fff;
+  font-family: "Cairo", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  white-space: nowrap;
+  text-decoration: none;
+  box-shadow: 0 5px 13px rgba(142, 106, 48, 0.13);
+  transition: transform 0.25s ease;
+}
+#custom_html-s6afff #farhaVenueSection .fvs-button:hover {
+  transform: translateY(-2px);
+}
+@media (max-width: 600px) {
+  #custom_html-s6afff #farhaVenueSection {
+    padding: 42px 12px 55px;
+  }
+  #custom_html-s6afff #farhaVenueSection .fvs-title {
+    font-size: 38px;
+  }
+  #custom_html-s6afff #farhaVenueSection .fvs-hall {
+    font-size: 30px;
+  }
+  #custom_html-s6afff #farhaVenueSection .fvs-address {
+    font-size: 15px;
+    margin: 22px auto 36px;
+  }
+  #custom_html-s6afff #farhaVenueSection .fvs-photo {
+    margin-bottom: 30px;
+  }
+  #custom_html-s6afff #farhaVenueSection .fvs-map {
+    height: 285px;
+  }
+  #custom_html-s6afff #farhaVenueSection .fvs-button {
+    min-height: 46px;
+    margin-top: 32px;
+    padding: 9px 25px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 370px) {
+  #custom_html-s6afff #farhaVenueSection .fvs-map {
+    height: 250px;
+  }
+}
+
+/* --- custom_html-845i0a --- */
+#custom_html-845i0a .farha-arabic-divider {
+  position: relative;
+  width: 100%;
+  height: 72px;
+  min-height: 72px;
+  box-sizing: border-box;
+  overflow: visible;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#custom_html-845i0a .farha-arabic-divider *,
+#custom_html-845i0a .farha-arabic-divider *::before,
+#custom_html-845i0a .farha-arabic-divider *::after {
+  box-sizing: border-box;
+}
+#custom_html-845i0a .farha-arabic-divider .fadiv-move {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  overflow: visible;
+}
+#custom_html-845i0a .farha-arabic-divider .fadiv-design {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+#custom_html-845i0a .farha-arabic-divider .fadiv-line {
+  position: relative;
+  display: block;
+  width: 82px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(181, 138, 74, 0.45),
+    #b58a4a
+  );
+}
+#custom_html-845i0a .farha-arabic-divider .fadiv-line.right {
+  background: linear-gradient(
+    90deg,
+    #b58a4a,
+    rgba(181, 138, 74, 0.45),
+    transparent
+  );
+}
+#custom_html-845i0a .farha-arabic-divider .fadiv-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #b58a4a;
+  opacity: 0.75;
+}
+#custom_html-845i0a .farha-arabic-divider .fadiv-center {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#custom_html-845i0a .farha-arabic-divider .fadiv-diamond {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  border: 1px solid rgba(181, 138, 74, 0.8);
+  transform: rotate(45deg);
+}
+#custom_html-845i0a .farha-arabic-divider .fadiv-diamond-small {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: #b58a4a;
+  transform: rotate(45deg);
+  box-shadow: 0 0 10px rgba(181, 138, 74, 0.25);
+}
+#custom_html-845i0a .farha-arabic-divider .fadiv-center::before,
+#custom_html-845i0a .farha-arabic-divider .fadiv-center::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #b58a4a;
+}
+#custom_html-845i0a .farha-arabic-divider .fadiv-center::before {
+  left: -3px;
+}
+#custom_html-845i0a .farha-arabic-divider .fadiv-center::after {
+  right: -3px;
+}
+
+/* --- custom_html-k8ujzo --- */
+#custom_html-k8ujzo .farha-ar-ending {
+  --gold: #b58a4a;
+  --brown: #76532e;
+  position: relative;
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 70px 24px 58px;
+  box-sizing: border-box;
+  overflow: visible;
+  background: transparent;
+  direction: rtl;
+  font-family: "Noto Naskh Arabic", "Geeza Pro", Tahoma, serif;
+}
+#custom_html-k8ujzo .farha-ar-ending *,
+#custom_html-k8ujzo .farha-ar-ending *::before,
+#custom_html-k8ujzo .farha-ar-ending *::after {
+  box-sizing: border-box;
+}
+#custom_html-k8ujzo .farha-ar-ending .fae-content {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: visible;
+}
+#custom_html-k8ujzo .farha-ar-ending .fae-title-wrap {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+#custom_html-k8ujzo .farha-ar-ending .fae-title-anim {
+  position: relative;
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s ease;
+}
+#custom_html-k8ujzo .farha-ar-ending.fae-show .fae-title-anim {
+  opacity: 1;
+  transform: translateY(0);
+}
+#custom_html-k8ujzo .farha-ar-ending .fae-title {
+  display: block;
+  margin: 0;
+  font-family: "Aref Ruqaa", "Geeza Pro", "Traditional Arabic", serif;
+  font-size: 31px;
+  line-height: 1.35;
+  font-weight: 700;
+  color: #765a37;
+  text-align: center;
+}
+#custom_html-k8ujzo .farha-ar-ending .fae-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 180px;
+  margin: 12px auto 26px;
+  pointer-events: none;
+}
+#custom_html-k8ujzo .farha-ar-ending .fae-ornament::before,
+#custom_html-k8ujzo .farha-ar-ending .fae-ornament::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+#custom_html-k8ujzo .farha-ar-ending .fae-ornament-symbol {
+  font-size: 16px;
+  line-height: 1;
+  color: #b58a4a;
+}
+#custom_html-k8ujzo .farha-ar-ending .fae-message-wrap {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+#custom_html-k8ujzo .farha-ar-ending .fae-message-anim {
+  position: relative;
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.75s ease 0.08s,
+    transform 0.75s ease 0.08s;
+}
+#custom_html-k8ujzo .farha-ar-ending.fae-show .fae-message-anim {
+  opacity: 1;
+  transform: translateY(0);
+}
+#custom_html-k8ujzo .farha-ar-ending .fae-message {
+  display: block;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.9;
+  font-weight: 500;
+  color: #654b2d;
+  text-align: center;
+}
+#custom_html-k8ujzo .farha-ar-ending .fae-second-wrap {
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+  overflow: visible;
+}
+#custom_html-k8ujzo .farha-ar-ending .fae-second-anim {
+  position: relative;
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.75s ease 0.16s,
+    transform 0.75s ease 0.16s;
+}
+#custom_html-k8ujzo .farha-ar-ending.fae-show .fae-second-anim {
+  opacity: 1;
+  transform: translateY(0);
+}
+#custom_html-k8ujzo .farha-ar-ending .fae-second {
+  display: block;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.85;
+  font-weight: 500;
+  color: #735537;
+  text-align: center;
+}
+#custom_html-k8ujzo .farha-ar-ending .fae-final-wrap {
+  position: relative;
+  width: 100%;
+  margin-top: 31px;
+  overflow: visible;
+}
+#custom_html-k8ujzo .farha-ar-ending .fae-final-anim {
+  position: relative;
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.75s ease 0.24s,
+    transform 0.75s ease 0.24s;
+}
+#custom_html-k8ujzo .farha-ar-ending.fae-show .fae-final-anim {
+  opacity: 1;
+  transform: translateY(0);
+}
+#custom_html-k8ujzo .farha-ar-ending .fae-final {
+  display: block;
+  margin: 0;
+  font-family: "Aref Ruqaa", "Geeza Pro", "Traditional Arabic", serif;
+  font-size: 25px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #866333;
+  text-align: center;
+}
+#custom_html-k8ujzo .farha-ar-ending .fae-names-wrap {
+  position: relative;
+  width: 100%;
+  margin-top: 26px;
+  overflow: visible;
+}
+#custom_html-k8ujzo .farha-ar-ending .fae-names-anim {
+  position: relative;
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.75s ease 0.32s,
+    transform 0.75s ease 0.32s;
+}
+#custom_html-k8ujzo .farha-ar-ending.fae-show .fae-names-anim {
+  opacity: 1;
+  transform: translateY(0);
+}
+#custom_html-k8ujzo .farha-ar-ending .fae-names {
+  display: block;
+  margin: 0;
+  font-family: "Aref Ruqaa", "Geeza Pro", "Traditional Arabic", serif;
+  font-size: 28px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #76532e;
+  text-align: center;
+}
+#custom_html-k8ujzo .farha-ar-ending .fae-date {
+  display: block;
+  margin-top: 7px;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #9a7848;
+  text-align: center;
+}
+#custom_html-k8ujzo .farha-ar-ending .fae-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 175px;
+  margin: 29px auto 0;
+  pointer-events: none;
+}
+#custom_html-k8ujzo .farha-ar-ending .fae-bottom::before,
+#custom_html-k8ujzo .farha-ar-ending .fae-bottom::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+#custom_html-k8ujzo .farha-ar-ending .fae-bottom-diamond {
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--gold);
+  transform: rotate(45deg);
+}
+@media (max-width: 370px) {
+  #custom_html-k8ujzo .farha-ar-ending {
+    padding: 62px 17px 52px;
+  }
+  #custom_html-k8ujzo .farha-ar-ending .fae-title {
+    font-size: 28px;
+  }
+  #custom_html-k8ujzo .farha-ar-ending .fae-message {
+    font-size: 16.5px;
+  }
+  #custom_html-k8ujzo .farha-ar-ending .fae-second {
+    font-size: 16px;
+  }
+  #custom_html-k8ujzo .farha-ar-ending .fae-final {
+    font-size: 23px;
+  }
+  #custom_html-k8ujzo .farha-ar-ending .fae-names {
+    font-size: 26px;
+  }
+}

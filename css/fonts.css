@@ -1,0 +1,49 @@
+/* Local invitation fonts (was inline base64) */
+
+@font-face {
+  font-family: "DUST";
+  src: url("../fonts/Daustley.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SAINT";
+  src: url("../fonts/SaintGrasello-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "cinzel";
+  src: url("../fonts/CinzelDecorative-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "gg";
+  src: url("../fonts/GreatVibes-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIWANY";
+  src: url("../fonts/Diwani_Letter.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AREF";
+  src: url("../fonts/DTHULUTH-II-1.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

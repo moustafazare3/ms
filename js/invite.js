@@ -72,7 +72,12 @@
       if (!old.parentNode) return;
       var fresh = doc.createElement("script");
       fresh.setAttribute("data-lb-section-script", "1");
-      fresh.textContent = old.textContent;
+      var src = old.getAttribute("src");
+      if (src) {
+        fresh.src = src;
+      } else {
+        fresh.textContent = old.textContent;
+      }
       old.parentNode.replaceChild(fresh, old);
     });
   }
@@ -583,11 +588,12 @@
     if (window.__lbMusic && typeof window.__lbMusic.destroy === "function") {
       window.__lbMusic.destroy();
     }
-    var cfgNode = doc.getElementById("invite-music");
-
-    if (!cfgNode) return;
-    var cfg;
-    try { cfg = JSON.parse(cfgNode.textContent); } catch (err) { return; }
+    var cfg = window.__lbInviteMusic || null;
+    if (!cfg) {
+      var cfgNode = doc.getElementById("invite-music");
+      if (!cfgNode) return;
+      try { cfg = JSON.parse(cfgNode.textContent); } catch (err) { return; }
+    }
     if (!cfg || !cfg.url || cfg.player === "hidden") return;
 
         var audio = new Audio(cfg.url);
@@ -1330,6 +1336,24 @@
 
   function syncLanguageHead(parsed) {
     LANG_HEAD_STYLES.forEach(function (key) {
+      var nextLink = parsed.querySelector("head link[" + key + "]");
+      var currentLink = doc.querySelector("head link[" + key + "]");
+      if (nextLink || currentLink) {
+        var nextHref = nextLink ? (nextLink.getAttribute("href") || "") : "";
+        if (!nextHref) { if (currentLink) currentLink.remove(); return; }
+        if (currentLink) {
+          if (currentLink.getAttribute("href") === nextHref) return;
+          currentLink.setAttribute("href", nextHref);
+          return;
+        }
+        var link = doc.createElement("link");
+        link.rel = "stylesheet";
+        link.href = nextHref;
+        link.setAttribute(key, "");
+        doc.head.appendChild(link);
+        return;
+      }
+
       var nextNode = parsed.querySelector("head style[" + key + "]");
       var nextText = nextNode ? nextNode.textContent : "";
       var currentNode = doc.querySelector("head style[" + key + "]");
@@ -1730,10 +1754,12 @@
   var SCROLL_PPS = { slow: 18, normal: 34, fast: 60 };   // بكسل في الثانية
 
   function initAutoScroll() {
-    var node = doc.getElementById("invite-scroll");
-    if (!node) return;
-    var cfg;
-    try { cfg = JSON.parse(node.textContent); } catch (e) { return; }
+    var cfg = window.__lbInviteScroll || null;
+    if (!cfg) {
+      var node = doc.getElementById("invite-scroll");
+      if (!node) return;
+      try { cfg = JSON.parse(node.textContent); } catch (e) { return; }
+    }
     if (!cfg || !cfg.enabled) return;
     if (window.__lbScroll) return;                       // اتربط قبل كده
     if (window.matchMedia &&

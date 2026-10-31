@@ -1,0 +1,65 @@
+@media (max-width: 480px) {
+  #video-1l8ryc,
+  #video-1l8ryc > .lb-inner,
+  #video-1l8ryc > .lb-inner > .lb-custom,
+  #video-1l8ryc .lb-custom .t396__artboard,
+  #video-1l8ryc .lb-custom .t396__filter,
+  #video-1l8ryc .lb-custom .t396__carrier {
+    height: calc(100cqw * 1.8974) !important;
+    min-height: calc(100cqw * 1.8974) !important;
+    height: round(100cqw * 1.8974, 1px) !important;
+    min-height: round(100cqw * 1.8974, 1px) !important;
+  }
+  #video-1l8ryc,
+  #video-1l8ryc > .lb-inner,
+  #video-1l8ryc > .lb-inner > .lb-custom,
+  #video-1l8ryc .lb-custom .t396__artboard {
+    overflow: visible !important;
+  }
+}
+@media (min-width: 481px) and (max-width: 960px) {
+  #video-1l8ryc,
+  #video-1l8ryc > .lb-inner,
+  #video-1l8ryc > .lb-inner > .lb-custom,
+  #video-1l8ryc .lb-custom .t396__artboard,
+  #video-1l8ryc .lb-custom .t396__filter,
+  #video-1l8ryc .lb-custom .t396__carrier {
+    height: calc(100cqw * 1.8974) !important;
+    min-height: calc(100cqw * 1.8974) !important;
+    height: round(100cqw * 1.8974, 1px) !important;
+    min-height: round(100cqw * 1.8974, 1px) !important;
+  }
+  #video-1l8ryc,
+  #video-1l8ryc > .lb-inner,
+  #video-1l8ryc > .lb-inner > .lb-custom,
+  #video-1l8ryc .lb-custom .t396__artboard {
+    overflow: visible !important;
+  }
+}
+@media (min-width: 961px) {
+  #video-1l8ryc,
+  #video-1l8ryc > .lb-inner,
+  #video-1l8ryc > .lb-inner > .lb-custom,
+  #video-1l8ryc .lb-custom .t396__artboard,
+  #video-1l8ryc .lb-custom .t396__filter,
+  #video-1l8ryc .lb-custom .t396__carrier {
+    height: calc(100cqw * 1.8974) !important;
+    min-height: calc(100cqw * 1.8974) !important;
+    height: round(100cqw * 1.8974, 1px) !important;
+    min-height: round(100cqw * 1.8974, 1px) !important;
+  }
+  #video-1l8ryc,
+  #video-1l8ryc > .lb-inner,
+  #video-1l8ryc > .lb-inner > .lb-custom,
+  #video-1l8ryc .lb-custom .t396__artboard {
+    overflow: visible !important;
+  }
+}
+#custom_html-k8ujzo,
+#custom_html-k8ujzo > .lb-inner,
+#custom_html-k8ujzo > .lb-inner > .lb-custom,
+#custom_html-k8ujzo .lb-custom .t396__artboard,
+#custom_html-k8ujzo .lb-custom .t396__filter,
+#custom_html-k8ujzo .lb-custom .t396__carrier {
+  background-color: transparent !important;
+}
